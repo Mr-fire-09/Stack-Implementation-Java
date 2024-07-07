@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Stack Application</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Stack Operations</h1>
+        
+        <form action="/operation" method="post" class="form-control">
+            <label for="item">Enter your number:</label>
+            <input type="number" id="item" name="item">
+            
+            <label for="operation">Choose an operation:</label>
+            <select id="operation" name="operation">
+                <option value="push">Push</option>
+                <option value="pop">Pop</option>
+                <option value="peek">Peek</option>
+                <option value="reset">Reset</option>
+            </select>
+            
+            <button type="submit">Submit</button>
+        </form>
+        
+        <div class="message" th:text="${message}"></div>
+    </div>
+</body>
+</html>
